@@ -1,0 +1,18 @@
+--- php-phpquery-0.9.5.386/cli/phpquery~	2012-02-08 22:31:36.000000000 +0200
++++ php-phpquery-0.9.5.386/cli/phpquery	2012-02-08 22:32:02.021248175 +0200
+@@ -9,13 +9,9 @@
+   cat index.html | phpquery --find 'div > p' --contents
+ Docs: 
+   http://code.google.com/p/phpquery/wiki/\n");
+-/* ALL-IN-ONE-SECTION-START */
+-set_include_path(get_include_path()
+-	.':'.'/usr/lib/phpquery'
+-	.':'.realpath(dirname(__FILE__).'/../phpQuery')
+-);
++
+ require_once('phpQuery.php');
+-/* ALL-IN-ONE-SECTION-END */
++
+ //phpQuery::$debug = true;
+ //var_dump($argv);
+ if (isset($argv[1]) && parse_url($argv[1], PHP_URL_HOST)) {

@@ -4,13 +4,14 @@
 Summary:	phpQuery - jQuery port to PHP
 Name:		php-phpquery
 Version:	0.9.5.386
-Release:	0.11
+Release:	0.13
 License:	The MIT License
 Group:		Development/Languages/PHP
 Source0:	https://phpquery.googlecode.com/files/phpQuery-%{version}.zip
 # Source0-md5:	3ddab515c82a1a102a87f90ab319e7d1
 Patch0:		svn.patch
 Patch1:		sys-mbstring.patch
+Patch2:		cli.patch
 URL:		https://code.google.com/p/phpquery/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.610
@@ -41,6 +42,7 @@ Object Model (DOM) API based on jQuery JavaScript Library.
 mv phpQuery .pq; mv .pq/* .
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 # fix shebang
 %{__sed} -i -e '1s,^#!.*env php,#!/usr/bin/php,' cli/phpquery
