@@ -1,0 +1,10 @@
+--- phpQuery-0.9.5.386/phpQuery/phpQuery.php~	2012-02-08 20:41:06.000000000 +0200
++++ phpQuery-0.9.5.386/phpQuery/phpQuery.php	2012-02-08 20:43:11.480245153 +0200
+@@ -23,7 +23,6 @@
+ require_once(dirname(__FILE__).'/phpQuery/phpQueryEvents.php');
+ require_once(dirname(__FILE__).'/phpQuery/Callback.php');
+ require_once(dirname(__FILE__).'/phpQuery/phpQueryObject.php');
+-require_once(dirname(__FILE__).'/phpQuery/compat/mbstring.php');
+ /**
+  * Static namespace for phpQuery functions.
+  *
