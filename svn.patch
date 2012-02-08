@@ -1,0 +1,22 @@
+--- php-phpquery-0.9.5.386/phpQuery/phpQuery/DOMDocumentWrapper.php	2009-03-31 17:42:39.000000000 +0300
++++ phpQuery-dev/phpQuery/phpQuery/DOMDocumentWrapper.php	2012-02-08 22:26:30.486110050 +0200
+@@ -386,7 +386,7 @@
+ 			.($xhtml ? '/' : '')
+ 			.'>';
+ 		if (strpos($html, '<head') === false) {
+-			if (strpos($hltml, '<html') === false) {
++			if (strpos($html, '<html') === false) {
+ 				return $meta.$html;
+ 			} else {
+ 				return preg_replace(
+--- php-phpquery-0.9.5.386/phpQuery/phpQuery/phpQueryObject.php	2009-04-10 10:47:36.000000000 +0300
++++ phpQuery-dev/phpQuery/phpQuery/phpQueryObject.php	2012-02-08 22:26:30.489443233 +0200
+@@ -1329,7 +1329,7 @@
+ 			if (extension_loaded('mbstring') && phpQuery::$mbstringSupport)
+ 				mb_ereg('^([^ ]+) (.*)$', $url, $matches);
+ 			else
+-				preg_match('^([^ ]+) (.*)$', $url, $matches);
++				preg_match('@^([^ ]+) (.*)$@', $url, $matches);
+ 			$url = $matches[1];
+ 			$selector = $matches[2];
+ 			// FIXME this sucks, pass as callback param
