@@ -15,14 +15,14 @@ Patch2:		cli.patch
 URL:		https://code.google.com/p/phpquery/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.610
-BuildRequires:	unzip
 BuildRequires:	sed >= 4.0
-Requires:	php-common >= 4:%{php_min_version}
-Requires:	php-date
-Requires:	php-dom
-Requires:	php-json
-Requires:	php-mbstring
-Requires:	php-pcre
+BuildRequires:	unzip
+Requires:	php(core) >= %{php_min_version}
+Requires:	php(date)
+Requires:	php(dom)
+Requires:	php(json)
+Requires:	php(mbstring)
+Requires:	php(pcre)
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
