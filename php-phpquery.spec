@@ -1,6 +1,5 @@
 %define		pkgname	phpQuery
 %define		php_min_version 5.2.0
-%include	/usr/lib/rpm/macros.php
 Summary:	phpQuery - jQuery port to PHP
 Name:		php-phpquery
 Version:	0.9.5.386
