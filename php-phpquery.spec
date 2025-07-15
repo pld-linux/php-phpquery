@@ -39,9 +39,9 @@ Object Model (DOM) API based on jQuery JavaScript Library.
 %prep
 %setup -qc
 mv phpQuery .pq; mv .pq/* .
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
+%patch -P0 -p1
+%patch -P1 -p1
+%patch -P2 -p1
 
 # fix shebang
 %{__sed} -i -e '1s,^#!.*env php,#!/usr/bin/php,' cli/phpquery
